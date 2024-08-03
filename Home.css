@@ -1,0 +1,392 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 150px;
+}
+
+.logo img {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.word-logo img {
+    height: 420px;
+}
+
+.title {
+    flex-grow: 1;
+    margin-left: 180px;
+}
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 150px;
+}
+
+.right-sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right-sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.right-sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 180px;
+    margin-right: 180px;
+    padding-bottom: 40px;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.additional-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #FFA500;
+    padding: 20px 0;
+}
+
+.additional-content .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.additional-content .text-box {
+    padding: 10px;
+    background: linear-gradient(to right, #a8e6cf, #dcedc1, #ffd3b6);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    flex: 1;
+    margin: 0 20px;
+    max-width: 400px;
+}
+
+.additional-content .row div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.additional-content .row img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
+.additional-content .row p {
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+.bottom-left img,
+.bottom-right img {
+    border-radius: 50%;
+}
+
+footer {
+    width: 100%;
+    background-color: #2b4c57;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    margin: 0px;
+    min-width: 20px;
+}
+
+.footer-left img {
+    max-width: 60%;
+    height: auto;
+}
+
+.footer-center a,
+.footer-right a {
+    color: white;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-center a:hover,
+.footer-right a:hover {
+    color: #ccc;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .logo img {
+        height: 80px;
+        margin-right: 80px;
+    }
+
+    .word-logo img {
+        height: 336px;
+        margin-right: 80px;
+    }
+
+
+    .title {
+        margin-left: 150px;
+    }
+
+    .right-sidebar {
+        width: 120px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 16px;
+    }
+
+    .content {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .content img {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .logo img {
+        height: 60px;
+    }
+
+    .word-logo img {
+        height: 252px;
+    }
+
+    .title {
+        margin-left: 120px;
+    }
+
+    .right-sidebar {
+        width: 100px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 14px;
+    }
+
+    .content {
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+
+    .content img {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 50px;
+    }
+
+    .word-logo img {
+        height: 210px;
+    }
+
+    .title {
+        margin-left: 100px;
+    }
+
+    .right-sidebar {
+        width: 80px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 12px;
+    }
+
+    .content {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .content img {
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .word-logo img {
+        height: 168px;
+    }
+
+    .title {
+        margin-left: 80px;
+    }
+
+    .right-sidebar {
+        width: 60px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 10px;
+    }
+
+    .content {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .content img {
+        height: auto;
+    }
+
+    .additional-content .row {
+        flex-direction: column;
+    }
+
+    .additional-content .row div {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 30px;
+    }
+
+    .word-logo img {
+        height: 126px;
+    }
+
+    .title {
+        margin-left: 60px;
+    }
+
+    .right-sidebar {
+        width: 40px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 8px;
+    }
+
+    .content {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .content img {
+        height: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo img {
+        height: 20px;
+    }
+
+    .word-logo img {
+        height: 84px;
+    }
+
+    .title {
+        margin-left: 40px;
+    }
+
+    .right-sidebar {
+        width: 30px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 6px;
+    }
+
+    .content {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .content img {
+        height: auto;
+    }
+}

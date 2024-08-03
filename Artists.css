@@ -1,0 +1,374 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 150px;
+}
+
+.logo img {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.word-logo img {
+    height: 420px;
+}
+
+.title {
+    flex-grow: 1;
+    margin-left: 180px;
+}
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 150px;
+}
+
+.right-sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right-sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.right-sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 0px;
+}
+
+.artists-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 180px;
+    margin-right: 180px;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.artists-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.artists-content p {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 150%;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 4s ease-in-out;
+}
+
+.image-container .image-1 {
+    opacity: 1;
+    animation: fadeInOut 8s infinite;
+}
+
+.image-container .image-2 {
+    opacity: 0;
+    animation: fadeInOut 8s 4s infinite;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    50.01%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.artist p {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    background-color: #2b4c57;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    margin: 0px;
+    min-width: 20px;
+}
+
+.footer-left img {
+    max-width: 60%;
+    height: auto;
+}
+
+.footer-center a,
+.footer-right a {
+    color: white;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-center a:hover,
+.footer-right a:hover {
+    color: #ccc;
+}
+
+
+@media (max-width: 1200px) {
+    .logo img {
+        height: 80px;
+        margin-right: 80px;
+    }
+
+    .word-logo img {
+        height: 336px;
+        margin-right: 80px;
+    }
+
+    .title {
+        margin-left: 150px;
+    }
+
+    .right-sidebar {
+        width: 120px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .logo img {
+        height: 60px;
+    }
+
+    .word-logo img {
+        height: 252px;
+    }
+
+    .title {
+        margin-left: 120px;
+    }
+
+    .right-sidebar {
+        width: 100px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 50px;
+    }
+
+    .word-logo img {
+        height: 210px;
+    }
+
+    .title {
+        margin-left: 100px;
+    }
+
+    .right-sidebar {
+        width: 80px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 12px;
+    }
+
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist {
+        max-width: 80%;
+    }
+
+    .concept-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .concept-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .word-logo img {
+        height: 168px;
+    }
+
+    .title {
+        margin-left: 80px;
+    }
+
+    .right-sidebar {
+        width: 60px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 10px;
+    }
+
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 30px;
+    }
+
+    .word-logo img {
+        height: 126px;
+    }
+
+    .title {
+        margin-left: 60px;
+    }
+
+    .right-sidebar {
+        width: 40px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo img {
+        height: 20px;
+    }
+
+    .word-logo img {
+        height: 84px;
+    }
+
+    .title {
+        margin-left: 40px;
+    }
+
+    .right-sidebar {
+        width: 10px;
+    }
+
+    .right-sidebar nav ul li a {
+        font-size: 6px;
+    }
+}

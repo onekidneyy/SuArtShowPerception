@@ -212,7 +212,6 @@ footer {
     color: #ccc;
 }
 
-
 @media (max-width: 1200px) {
     .logo img {
         height: 80px;
@@ -280,6 +279,12 @@ footer {
         font-size: 12px;
     }
 
+    .artists-content {
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 20px 10px;
+    }
+
     .artists-grid {
         grid-template-columns: 1fr;
     }
@@ -314,6 +319,12 @@ footer {
 
     .right-sidebar {
         width: 60px;
+    }
+
+    .artists-content {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px 50px;
     }
 
     .right-sidebar nav ul li a {
@@ -358,10 +369,6 @@ footer {
 
     .word-logo img {
         height: 84px;
-    }
-
-    .title {
-        margin-left: 40px;
     }
 
     .right-sidebar {
